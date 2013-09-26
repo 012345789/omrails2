@@ -1,11 +1,15 @@
-<div class="hero-unit">
-	<h3>SpoonRocket Home</h3>
-	<p>This is the home page.</p>
-	<p>
-		<%= link_to "SpoonRocket", "http://www.spoonrocket.com" %>
-	</p>
+<% if user_signed_in? %>
+	<h1>Welcome to the member's page</h1>
+<% else %>
+	<div class="hero-unit">
+		<h3>SpoonRocket Home</h3>
+		<p>This is the home page.</p>
+		<p>
+			<%= link_to "SpoonRocket", "http://www.spoonrocket.com" %>
+		</p>
 
-	<p>
-		<%= link_to "Sign Up (Temp link)", "#", class: "btn btn-primary" %>
-	</p>
-</div>
+		<p>
+			<%= link_to "Sign Up (Temp link)", new_user_registration_path, class: "btn btn-primary" %>
+		</p>
+	</div>
+<% end %>
