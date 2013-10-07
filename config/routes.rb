@@ -5,9 +5,15 @@ Omrails::Application.routes.draw do
   devise_for :users
   #match 'users/:id' => 'users#show', as: :user
 
-  get 'about' => 'pages#about'
-  #set the root
+  #set the root (home page)
   root :to => 'pages#home'
+  #set the paths and their names
+  get 'about' => 'pages#about'
+  get 'services' => 'pages#services'
+  get 'testimonies' => 'pages#testimonies'
+  get 'contact' => 'pages#contact'
+  get 'faq' => 'pages#faq'
+  
 
 
   # The priority is based upon order of creation:
