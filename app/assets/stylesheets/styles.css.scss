@@ -9,8 +9,14 @@ body {
 
 @import 'bootstrap-responsive';
 
+.pull-center {
+	/*margin-left: auto;*/
+	margin-left: 50%;
+	/*text-align: center;*/
+} /* this doesn't work yet */
+
 .footer {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	color: $grayLight;
 	a {
 		color: $gray;
@@ -47,4 +53,17 @@ body {
 .brand {
 	font-style: bold;
 	font-size: 28px;
+}
+
+/*.about-page {
+	background: gray;
+}*/
+
+.question {
+	color: #ED1178;
+	font-style: bold;
+}
+
+.answer {
+	font-style: bold;
 }

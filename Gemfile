@@ -12,6 +12,7 @@ gem 'aws-sdk'
 
 group :production do
 	gem 'pg'
+	#gem 'rails_12factor', '0.0.2' #may need this later (listed in Michael Hartl's eBook)
 end
 group :development, :test do
 	gem 'sqlite3'
