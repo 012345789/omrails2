@@ -2,9 +2,9 @@
 <html>
 <!-- this application page is loaded for every single page on the site -->
 <head>
-  <title>PS-Guru Rails</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>PS-Guru | <%= yield(:title) %></title>
+  <%= stylesheet_link_tag    "application", :media => "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
