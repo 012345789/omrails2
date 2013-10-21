@@ -13,6 +13,7 @@ Omrails::Application.routes.draw do
   get 'testimonies' => 'pages#testimonies'
   get 'contact' => 'pages#contact'
   get 'faq' => 'pages#faq'
+  get 'team' => 'pages#team'
   
 
 

@@ -2,12 +2,19 @@ $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 @import 'bootstrap';
+@import 'bootstrap-responsive';
+
+html {
+	overflow-y: scroll;
+}
 
 body {
 	padding-top: 60px;
 }
 
-@import 'bootstrap-responsive';
+section {
+	overflow: auto;
+}
 
 .pull-center {
 	/*margin-left: auto;*/
@@ -15,11 +22,46 @@ body {
 	/*text-align: center;*/
 } /* this doesn't work yet */
 
-.footer {
-	/*margin-top: 50px;*/
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #999;
+	a {
+		color: #555;
+		&:hover {
+			color: #222;
+		}
+	}
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
+
+/*.footer {
+	/*margin-top: 50px;
 	color: $grayLight;
 	a {
 		color: $gray;
+	}
+} */
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+	h1 {
+		margin-bottom: 10px;
 	}
 }
 
@@ -50,9 +92,13 @@ body {
 	margin: 10px 0 5px;
 }
 
-.brand {
+.brand { //the logo at the top left
 	font-style: bold;
 	font-size: 28px;
+	text-transform: uppercase;
+	&:hover {
+	  color: #3C4BF5;
+	}
 }
 
 /*.about-page {

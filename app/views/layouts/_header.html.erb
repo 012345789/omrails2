@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
  
@@ -14,13 +14,14 @@
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
       	<ul class="nav pull-center">
- 			     <li><%= link_to "Home", root_path %></li>
-			     <li><%= link_to "About", about_path %></li>
-           <li><%= link_to "Services", services_path %></li>
-           <li><%= link_to "Testimonies", testimonies_path %></li>
-           <li><%= link_to "Contact", contact_path %></li>
-           <li><%= link_to "FAQ", faq_path %></li>
-	 	    </ul>	
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			<li><%= link_to "The Guru", team_path %></li>
+			<!-- <%- link_to "Services", services_path -%> -->
+			<li><%= link_to "Testimonies", testimonies_path %></li>
+			<li><%= link_to "Contact", contact_path %></li>
+			<li><%= link_to "FAQ", faq_path %></li>
+ 	    </ul>	
 	 	    <ul class="nav pull-right">
       <% if user_signed_in? %>
           <li><%= link_to "Upload Essay/Pin", new_pin_path %></li>
@@ -35,4 +36,4 @@
  
     </div>
   </div>
-</div>
+</header>
