@@ -1,5 +1,28 @@
-<div id="pins">
-  <%= render @pins %>
+<h3>Listing Essays</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Essay Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <%= render @pins %>
+    </tbody>
+</table>
+
+<br />
+
+<!-- <div id="pins">
+  <%-# render @pins -%>
+</div> -->
+
+<div class="upload-essay-button">
+	<%= link_to "Upload New Essay", new_pin_path, class: "btn" %>
 </div>
 
 <!-- <h1>Listing pins</h1>
@@ -16,7 +39,7 @@
   </thead>
 
   <tbody>
-    <%= render @pins %>
+    <%-# render @pins -%>
   </tbody>
 </table>
 

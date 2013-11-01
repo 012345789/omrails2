@@ -1,12 +1,12 @@
 class PinsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index] #may want to comment out stuff after authenticate_user!
+  before_filter :authenticate_user! #, except: [:index] #may want to comment out stuff after authenticate_user! [commented]
 
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.order("created_at desc")
-    #if you want it so that only users can see their own pins:
-    #@pins = current_user.pins.all
+    #@pins = Pin.order("created_at desc")
+    #if you want it so that only users can see their own pins: (currently active)
+    @pins = current_user.pins.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -48,7 +48,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+        format.html { redirect_to @pin, notice: 'Essay was successfully uploaded.' }
         format.json { render json: @pin, status: :created, location: @pin }
       else
         format.html { render action: "new" }
@@ -64,7 +64,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
-        format.html { redirect_to @pin, notice: 'Pin was successfully updated.' }
+        format.html { redirect_to @pin, notice: 'Essay was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

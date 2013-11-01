@@ -14,7 +14,7 @@ Omrails::Application.routes.draw do
   get 'contact' => 'pages#contact'
   get 'faq' => 'pages#faq'
   get 'team' => 'pages#team'
-  
+  get 'pins' => 'pins#index'
 
 
   # The priority is based upon order of creation:

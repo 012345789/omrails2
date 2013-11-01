@@ -1,18 +1,21 @@
 <%-# provide(:title, 'Home') -%>
 
 <% if user_signed_in? %>
-	<h1>Welcome to the member's page</h1>
+	<h4>Welcome <%= current_user.name %></h4>
 <% else %>
+<% end %>
 	<div class="hero-unit center">
 		<h2>Personal Statements. Perfected.</h2>
 		<p>hard workers deserve a great college (slogan up to you)</p>
 		<p>
 			Inspiring embedded 1-2 minute video with beautiful background music and various 1 sentence testimonies about how great Filipek is goes here
 		</p>
-
+<% if not user_signed_in? %>
 		<p>
 			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
 		</p>
+<% else %>
+<% end %>
 	</div>
 	
 	
@@ -40,4 +43,3 @@
 	</p>
 			
 </div>
-<% end %>
