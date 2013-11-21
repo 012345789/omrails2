@@ -1,6 +1,8 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :document
-  has_attached_file :document
+  has_attached_file :document,
+    :path => ':rails_root/assets/documents/:id/:basename.:extension'
+  attr_protected :document_file_name, :document_content_type, :document_file_size
 
   validates :description, presence: true
   validates :user_id, presence: true

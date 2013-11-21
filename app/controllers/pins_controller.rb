@@ -84,4 +84,8 @@ class PinsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def download
+    send_file @pin.document_path, :type => @pin.document_content_type, :filename => @pin.permalink
+  end
 end

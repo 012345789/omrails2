@@ -6,7 +6,8 @@
 			  <%= @pin.description %>
 			</p>
 			<p>
-				<%= link_to 'Download Essay File', "/public/system/pins/documents/000/000/12/original/" , class: "btn btn-info" %>
+				<%= link_to 'Download Essay File', @pin.document.url , class: "btn btn-info" %>
+				<%-# link_to 'Download Essay File', download_pin_path(@pin) , class: "btn btn-info" -%>
 			</p>
 			<% if current_user == @pin.user %>
 				<%= link_to 'Edit', edit_pin_path(@pin) %> |
