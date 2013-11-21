@@ -5,6 +5,9 @@
 			<p>
 			  <%= @pin.description %>
 			</p>
+			<p>
+				<%= link_to 'Download Essay File', "/public/system/pins/documents/000/000/12/original/" , class: "btn btn-info" %>
+			</p>
 			<% if current_user == @pin.user %>
 				<%= link_to 'Edit', edit_pin_path(@pin) %> |
 			<% end %>
@@ -12,6 +15,9 @@
 		</div>
 		<p>
 			<%= @pin.user.name %>
+		</p>
+		<p>
+			Last update: <%= @pin.document_updated_at %>
 		</p>
 	</div>
 </div>

@@ -3,10 +3,13 @@
   <%= f.full_error :document_file_size, class: "alert alert-error" %>
   <%= f.full_error :document_content_type, class: "alert alert-error" %>
 
-  	<%= f.input :document, label: "Upload a document" , input_html: {accept: ('application/pdf') } %>
-    <%= f.input :description, as: :text, input_html: { rows: "2"} %>
+  	<%= f.input :document, label: "Upload a document (.doc/.docx/.pdf only)" , input_html: {accept: ('application/pdf') } %> 
+  	
+  	<%-# f.input :document, label: "Upload a document" , input_html: {accept: ('application/pdf') } -%>
+    
+    <%= f.input :description, as: :text, input_html: { rows: "2"}, label: "Title" %>
 
   <div class="form-actions">
-    <%= f.button :submit, class: "btn" %>
+    <%= f.button :submit, value: "Upload Essay", class: "btn" %>
   </div>
 <% end %>
