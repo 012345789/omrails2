@@ -1,19 +1,27 @@
 <h3>Listing Essays</h3>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Essay Description</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
+<% if current_user.pins.empty? %>
 
-    <tbody>
-        <%= render @pins %>
-    </tbody>
-</table>
+	You currently do not have any uploaded essays.
+
+<% else %>
+
+	<table class="table table-striped">
+	    <thead>
+	        <tr>
+	            <th>Essay Description</th>
+	            <th></th>
+	            <th></th>
+	            <th></th>
+	        </tr>
+	    </thead>
+	
+	    <tbody>
+	        <%= render @pins %>
+	    </tbody>
+	</table>
+	
+<% end %>
 
 <br />
 

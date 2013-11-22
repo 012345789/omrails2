@@ -78,4 +78,24 @@ Omrails::Application.configure do
     }
   }
 
+  # Email confirmation for user sign up (different from development.rb)
+  config.action_mailer.default_url_options = {:host => 'http://secure-crag-4919.herokuapp.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "127.0.0.1",
+    :port    => 25,
+    :domain  => 'http://secure-crag-4919.herokuapp.com'
+  }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+     :tls => true,
+     :address => "smtp.gmail.com",
+     :port => 587,
+     :domain => "gmail.com",
+     :authentication => :login,
+     :user_name => "personalstatementguru@gmail.com",
+     :password => "superstatement!"
+   }
+
+
 end
