@@ -66,7 +66,8 @@ Omrails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #:host should be set to the actual host (domain name to be registered)
-  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+  #config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+  config.action_mailer.default_url_options = {:host => 'http://secure-crag-4919.herokuapp.com'}
 
   # Configuring Amazon S3 for Paperclip fil uploads
   config.paperclip_defaults = {
@@ -79,14 +80,17 @@ Omrails::Application.configure do
   }
 
   # Email confirmation for user sign up (different from development.rb)
-  config.action_mailer.default_url_options = {:host => 'http://secure-crag-4919.herokuapp.com'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "127.0.0.1",
-    :port    => 25,
-    :domain  => 'http://secure-crag-4919.herokuapp.com'
-  }
+  #config.action_mailer.default_url_options = {:host => 'http://secure-crag-4919.herokuapp.com'}
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #  :address => "127.0.0.1",
+  #  :port    => 25,
+  #  :domain  => 'http://secure-crag-4919.herokuapp.com'
+  #}
+  #above commented out for testing
   ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings = {
      :tls => true,
      :address => "smtp.gmail.com",
