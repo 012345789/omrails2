@@ -39,4 +39,5 @@ Omrails::Application.configure do
   # Email confirmation for user sign up
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
+  
 end
