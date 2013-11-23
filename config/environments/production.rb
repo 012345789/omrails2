@@ -68,8 +68,10 @@ Omrails::Application.configure do
   #:host should be set to the actual host (domain name to be registered)
   #config.action_mailer.default_url_options = { :host => 'localhost:3000'}
   config.action_mailer.default_url_options = {:host => 'secure-crag-4919.herokuapp.com'}
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
+     :enable_starttls_auto => true,
      :tls => true,
      :address => 'secure-crag-4919.herokuapp.com',
      :port => 587,
