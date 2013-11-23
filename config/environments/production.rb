@@ -70,6 +70,7 @@ Omrails::Application.configure do
   config.action_mailer.default_url_options = {:host => 'secure-crag-4919.herokuapp.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
+     :tls => true,
      :address => 'secure-crag-4919.herokuapp.com',
      :port => 587,
      :domain => 'gmail.com',
