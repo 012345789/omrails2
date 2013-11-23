@@ -74,7 +74,7 @@ Omrails::Application.configure do
      :address => 'secure-crag-4919.herokuapp.com',
      :port => 587,
      :domain => 'gmail.com',
-     :authentication => :plain,
+     :authentication => :login,
      :user_name => 'personalstatementguru@gmail.com',
      :password => 'superstatement!'
    }
