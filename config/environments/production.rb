@@ -67,8 +67,7 @@ Omrails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #:host should be set to the actual host (domain name to be registered)
-  #config.action_mailer.default_url_options = { :host => 'localhost:3000'}
-  require 'tlsmail'    
+  #config.action_mailer.default_url_options = { :host => 'localhost:3000'}    
   Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
   ActionMailer::Base.default_url_options = {:host => 'secure-crag-4919.herokuapp.com'}
   ActionMailer::Base.raise_delivery_errors = true
