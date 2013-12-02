@@ -80,11 +80,11 @@ Omrails::Application.configure do
      :port => 587,
      :authentication => :plain,
      :enable_starttls_auto => true,
-     :user_name => 'personalstatementguru@gmail.com',
-     :password => 'superstatement!'
+     :user_name => ENV['EMAILER_USERNAME'],
+     :password => ENV['EMAILER_PASSWORD']
    }
   
-  # Configuring Amazon S3 for Paperclip fil uploads
+  # Configuring Amazon S3 for Paperclip file uploads
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {

@@ -2,8 +2,18 @@
     <td><%= pin.description %></td>
     <td><%= link_to 'Show', pin %></td>
     <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if pin.user == current_user or current_user.admin? %>
+    	<td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure you want to delete this essay?' } %></td>
+    <% end %>
+    <% if current_user.admin? or current_user != pin.user %>
+    	<% if pin.user.admin? %>
+    		<td>by <%= mail_to pin.user.email, pin.user.name, :class => 'red-text' %></td>
+    	<% else %>
+    		<td>by <%= mail_to pin.user.email, pin.user.name, :class => 'blue-text' %></td>
+    	<% end %>
+    <% end %>
 </tr>
+
 
 
 

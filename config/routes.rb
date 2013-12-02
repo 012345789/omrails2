@@ -1,4 +1,5 @@
 Omrails::Application.routes.draw do
+
   resources :pins do
     member do
       get :download

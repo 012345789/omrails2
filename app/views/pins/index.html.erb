@@ -1,6 +1,6 @@
 <h3>Listing Essays</h3>
 
-<% if current_user.pins.empty? %>
+<% if current_user.pins.empty? and current_user.admin? == false %>
 
 	You currently do not have any uploaded essays.
 

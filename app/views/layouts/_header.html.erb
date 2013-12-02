@@ -27,9 +27,10 @@
           <li><%= link_to "Essays", pins_path %></li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-  	 		  <li><%= link_to "Login", new_user_session_path %></li>
-	 	    <% end %>
+    	<% else %>
+ 		  <li><%= link_to "Login", new_user_session_path %></li>
+ 	    <% end %>
+	 
     </ul>
         <!-- .nav, .navbar-search, .navbar-form, etc -->
       </div>
