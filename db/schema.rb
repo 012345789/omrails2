@@ -11,20 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131130163030) do
+ActiveRecord::Schema.define(:version => 20131207160650) do
 
-  create_table "pins", :force => true do |t|
-    t.string   "description"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
-    t.integer  "user_id"
-    t.string   "document_file_name"
-    t.string   "document_content_type"
-    t.integer  "document_file_size"
-    t.datetime "document_updated_at"
-  end
-
-  add_index "pins", ["user_id"], :name => "index_pins_on_user_id"
+# Could not dump table "pins" because of following StandardError
+#   Unknown type 'array' for column 'share'
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

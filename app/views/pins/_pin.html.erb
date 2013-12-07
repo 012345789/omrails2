@@ -5,7 +5,7 @@
     <% if pin.user == current_user or current_user.admin? %>
     	<td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure you want to delete this essay?' } %></td>
     <% end %>
-    <% if current_user.admin? or current_user != pin.user %>
+    <% if current_user.admin? or current_user != pin.user %> <!-- change this line later so that users cannot see admin's email -->
     	<% if pin.user.admin? %>
     		<td>by <%= mail_to pin.user.email, pin.user.name, :class => 'red-text' %></td>
     	<% else %>
