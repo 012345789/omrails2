@@ -9,13 +9,7 @@
   	<p>Account Status: Active User</p>
   <% end %>
 	
-  <%= f.label :account, label: "Account Status" %>
-  <% if current_user.admin? %>
-  	<% f.input :account_status %>
-  <% else %>
-  	<%-# f.input :description, string: "User", disabled: true -%>
-  <% end %>
-  
+
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :current_password, label: "Current Password", autocomplete: "off" %>
