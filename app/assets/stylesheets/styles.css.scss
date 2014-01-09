@@ -16,6 +16,15 @@ section {
 	overflow: auto;
 }
 
+.image {
+  margin: 5px;
+  //padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #444;
+}
+
 .pull-center {
 	/*margin-left: auto;*/
 	margin-left: 50%;
@@ -27,6 +36,7 @@ footer {
 	padding-top: 5px;
 	border-top: 1px solid #eaeaea;
 	color: #999;
+	
 	a {
 		color: #555;
 		&:hover {
@@ -53,6 +63,38 @@ footer {
 		color: $gray;
 	}
 } */
+
+.inline_two {
+  display: inline-block;
+  margin: 1px;
+  vertical-align: middle;
+}
+
+.inline_two_small {
+  width: 140px;
+  margin-top: -10px;
+}
+
+.inline_two_large {
+  width: 80%;
+  margin: -5px 1px 0 20px;
+}
+
+.inline_three {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.faq_body {
+  background: url('backgroundpicture.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
 
 textarea {
 	resize: vertical;
@@ -126,3 +168,5 @@ textarea {
 .blue-text {
   color: #0000DE
 }
+
+
