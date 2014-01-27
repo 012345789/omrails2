@@ -94,6 +94,9 @@ footer {
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #FFFFFF; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+
 }
 
 textarea {
@@ -143,9 +146,14 @@ textarea {
 	}
 }
 
-/*.about-page {
-	background: gray;
-}*/
+.about_body {
+  /* background: url("library_students_blurred2.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px; */
+}
+
 
 .question {
 	color: #ED1178;
